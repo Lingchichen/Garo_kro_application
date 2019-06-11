@@ -1,0 +1,42 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Admin Panel | Working as One</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'kroadmin/working-as-one.png' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'kroadmin/style.css' %}" />
+      <!-- jQuery -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TableDnD/0.9.1/jquery.tablednd.js" integrity="sha256-d3rtug+Hg1GZPB7Y/yTcRixO/wlI78+2m08tosoRn7A=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TableDnD/0.9.1/jquery.tablednd.js" integrity="sha256-d3rtug+Hg1GZPB7Y/yTcRixO/wlI78+2m08tosoRn7A=" crossorigin="anonymous"></script>
+     <script>
+     $(document).ready(function() {
+        console.log('hi');
+      	$("#table-1").tableDnD({
+      	    onDragClass: "myDragClass",
+      	    onDrop: function(table, row) {
+                  var rows = table.tBodies[0].rows;
+                  console.log('hi');
+                  var debugStr = "Row dropped was "+row.id+". New order: ";
+                  for (var i=0; i<rows.length; i++) {
+                      debugStr += rows[i].id+" ";
+                  }
+                var ordered_items=$.tableDnD.serialize(row);
+                $('#table-1').load( + ordered_items);
+
+      	        $(table).parent().find('.result').text(debugStr);
+      	    },
+      		  onDragStart: function(table, row) {
+      			$(table).parent().find('.result').text("Started dragging row "+row.id);
+      		},
+
+      	});
+
+      });
+
+      </script>
+</head>
+<body>
+  <div id='container'>

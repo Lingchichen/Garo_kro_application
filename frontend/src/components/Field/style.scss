@@ -1,0 +1,24 @@
+@import "styles/variables";
+.field {
+  text-align: right;
+  width: 219px;
+  margin-left: auto;
+  margin-right: auto;
+
+  label {
+    margin-right: 9px;
+    font-size: 14px;
+    color: $dark-gray;
+  }
+
+  input {
+    width: 146px;
+    height: 35px;
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+}

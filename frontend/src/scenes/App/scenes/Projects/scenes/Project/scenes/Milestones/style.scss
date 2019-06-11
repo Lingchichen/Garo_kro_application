@@ -1,0 +1,73 @@
+@import "styles/variables";
+
+.top-gray-bar .buttons button.new-milestone-button {
+  vertical-align: middle;
+  padding: 2px 15px;
+  font-weight: normal;
+  line-height: 17px;
+  margin-right: -150px;
+  margin-left: 50px;
+}
+
+.milestones-list {
+  .title {
+    text-align: center;
+    margin-top: 10px;
+
+    .label {
+      color: $dark-gray;
+      width: 100px;
+      text-align: right;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    input {
+      width: 350px;
+      border-radius: 10px;
+      border: 2px solid $dark-gray;
+      text-align: left;
+      padding-left: 5px;
+    }
+  }
+
+  table {
+    width: 90%;
+    margin: 20px auto;
+    thead {
+      th {
+        color: $dark-gray;
+        font-weight: normal;
+      }
+
+      tr {
+        background-color: white;
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    tr {
+      background-color: $light-gray;
+      border-bottom: 1px solid $dark-lime;
+      border-left: 1px solid $dark-lime;
+      border-right: 1px solid $dark-lime;
+      height: 35px;
+
+      &:nth-child(even) {
+        background-color: $light-lime;
+      }
+    }
+
+    td,
+    th {
+      padding: 0 10px;
+    }
+
+    td:first-child {
+      color: $hot-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

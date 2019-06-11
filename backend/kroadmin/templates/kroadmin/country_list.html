@@ -1,0 +1,11 @@
+{# kroadmin/templates/kroadmin/country_list.html #}
+{% extends "./base.html" %}
+{% load render_table from django_tables2 %}
+{% block content %}
+    <h1>Country List</h1>
+    {% if country_list %}
+        {% render_table table %}
+    {% else %}
+        <p>There are no countries.</p>
+    {% endif %}
+{% endblock %}

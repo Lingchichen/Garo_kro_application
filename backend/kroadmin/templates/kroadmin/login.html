@@ -1,0 +1,16 @@
+{# kroadmin/templates/kroadmin/login.html #}
+
+{% extends "./base.html" %}
+
+{% block content %}
+  <div id="login-page">
+    <h1>Please login below:</h1>
+    <form method="post">
+      {% csrf_token %}
+      <table id="login-page__table">
+        {{ form.as_table }}
+      </table>
+      <button class="large" type="submit">Login</button>
+    </form>
+  </div>
+{% endblock %}

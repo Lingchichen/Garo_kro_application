@@ -1,0 +1,770 @@
+@import "styles/variables";
+
+.modals.open {
+  width: $appWidth;
+  height: $appHeight;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: auto;
+}
+
+.kro-modal {
+  background-color: white;
+  width: 750px;
+  height: 470px;
+  overflow: auto;
+  margin-left: 120px;
+  margin-top: 80px;
+  border: 2px solid $dark-lime;
+  border-radius: 15px;
+  position: absolute;
+
+  &.attendance {
+    h3 {
+      text-align: center;
+    }
+
+    .box {
+      border-color: $dark-gray;
+      border-width: 2px;
+      padding: 5px;
+
+      h5 {
+        color: $dark-gray;
+      }
+    }
+
+    .attendance-from {
+      float: left;
+      width: 250px;
+      height: 350px;
+      margin-left: 50px;
+
+      &.department .attendance-filters {
+        margin-bottom: 6px;
+      }
+
+      .attendance-filters {
+        margin-bottom: 30px;
+      }
+
+      .attendance-select,
+      .attendance-filters {
+        padding-left: 20px;
+      }
+
+      .attendance-roles {
+        padding-left: 30px;
+        margin-top: 10px;
+      }
+
+      select {
+        background-color: $light-lime;
+        width: 190px;
+        border: 1px solid $dark-lime;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+
+    .attendance-to {
+      float: right;
+      width: 325px;
+      height: 350px;
+      margin-right: 50px;
+
+      .attendance-table {
+        width: 100%;
+
+        tr {
+          border: 1px solid $dark-lime;
+
+          &.selected td {
+            background-color: $dark-lime;
+          }
+
+          &:nth-child(odd) {
+            background-color: $light-gray;
+          }
+
+          &:nth-child(even) {
+            background-color: $light-lime;
+          }
+
+          td {
+            padding: 3px;
+          }
+        }
+      }
+    }
+
+    .add-remove {
+      width: 70px;
+      display: inline-block;
+
+      img {
+        display: block;
+        width: 40px;
+        margin: 80px auto;
+        cursor: pointer;
+
+        &.add {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+      button {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+.radio-button {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $dark-lime;
+  border-radius: 50%;
+  vertical-align: middle;
+
+  &.active {
+    background-color: blue;
+  }
+}
+
+.kro-modal.parking-lot-modal {
+  h3 {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  color: $dark-gray;
+
+  select {
+    //background-color: $light-lime;
+    width: 190px;
+    border: 1px solid $dark-lime;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .originator,
+  .time-alloted-select {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .time-alloted-select {
+    text-align: right;
+    padding-right: 80px;
+  }
+
+  .originator {
+    padding-left: 80px;
+  }
+
+  .note {
+    padding-left: 115px;
+    margin-top: 20px;
+  }
+
+  .note textarea {
+    width: 515px;
+    vertical-align: top;
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+  }
+
+  .originator select {
+    width: 150px;
+  }
+
+  .time-alloted-select select {
+    width: 80px;
+  }
+
+  .buttons {
+    margin-top: 100px;
+    text-align: center;
+    button:first-child {
+      margin-right: 100px;
+    }
+  }
+}
+
+.kro-modal.success-modal {
+  padding: 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 100px;
+    margin-right: 10px;
+    color: $dark-gray;
+  }
+
+  input,
+  textarea,
+  select {
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  select {
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 550px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+
+  .radio-button {
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
+
+    &.first {
+      margin-left: 0;
+    }
+  }
+
+  .buttons {
+    margin-top: 100px;
+    text-align: center;
+    button:first-child {
+      margin-right: 100px;
+    }
+  }
+}
+
+.kro-modal.challenge-modal {
+  padding: 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 100px;
+    margin-right: 10px;
+    color: $dark-gray;
+  }
+
+  input,
+  textarea,
+  select {
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  select {
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 550px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+
+  .radio-button {
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
+
+    &.first {
+      margin-left: 0;
+    }
+  }
+
+  .buttons {
+    margin-top: 40px;
+    text-align: center;
+    button:first-child {
+      margin-right: 100px;
+    }
+  }
+}
+
+.kro-modal.update-status-modal {
+  padding: 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 120px;
+    margin-right: 10px;
+    color: $dark-gray;
+  }
+
+  input,
+  textarea,
+  select {
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  select {
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+  }
+
+  input {
+    width: 550px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 550px;
+    margin-bottom: 10px;
+  }
+
+  .radio-button {
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
+
+    &.first {
+      margin-left: 0;
+    }
+  }
+
+  .buttons {
+    margin-top: 10px;
+    text-align: center;
+    button:first-child {
+      margin-right: 100px;
+    }
+  }
+
+  .percent-complete input {
+    width: 400px;
+    border: none;
+  }
+
+  .gray-box {
+    border: 2px solid $dark-gray;
+    border-radius: 10px;
+    padding: 10px;
+
+    & > div {
+      display: inline-block;
+      margin-right: 20px;
+      input {
+        width: 180px;
+      }
+    }
+  }
+
+  .new-due-date {
+    > div {
+      display: inline-block;
+    }
+
+    .react-datepicker {
+      border: 2px solid $dark-lime;
+    }
+
+    .react-datepicker__day--selected,
+    .react-datepicker__day--in-selecting-range,
+    .react-datepicker__day--in-range {
+      background-color: $dark-lime;
+    }
+    .react-datepicker__day--outside-month {
+      color: $dark-gray;
+    }
+  }
+
+  .growth-class {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.kro-modal.status-history-modal {
+  padding: 0 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 125px;
+    margin-right: 10px;
+    color: $dark-gray;
+  }
+
+  input,
+  textarea,
+  select {
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  input {
+    width: 450px;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    border-bottom: 1px solid $dark-lime;
+    border-left: 1px solid $dark-lime;
+    border-right: 1px solid $dark-lime;
+    background-color: $light-gray;
+    &:nth-child(even) {
+      background-color: $light-lime;
+    }
+  }
+
+  thead tr {
+    background-color: white;
+    border-left: none;
+    border-right: none;
+  }
+
+  th {
+    font-weight: normal;
+    color: $dark-gray;
+  }
+
+  td.comments {
+    max-width: 190px;
+  }
+}
+
+.assigned-team {
+  width: 180px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.success-fields {
+  width: 480px;
+  display: inline-block;
+}
+
+.challenge-fields {
+  width: 480px;
+  display: inline-block;
+}
+
+.kro-modal.team-assignment-modal {
+  padding: 0 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  h5 {
+    color: $dark-gray;
+  }
+
+  .filters {
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .radio-button {
+    cursor: pointer;
+  }
+
+  .selector {
+    vertical-align: top;
+    padding-top: 10px;
+    margin-left: 50px;
+    width: 250px;
+
+    .contractor {
+      margin-top: 40px;
+    }
+  }
+
+  input,
+  select {
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  input {
+    width: 450px;
+    margin-bottom: 10px;
+  }
+
+  select {
+    width: 200px;
+    height: 135px;
+    background-color: $light-gray;
+    padding: 0;
+  }
+
+  .buttons {
+    margin-top: 15px;
+    text-align: center;
+    button {
+      margin: 0 15px;
+    }
+  }
+
+  .delete-button {
+    float: right;
+    margin-top: -33px;
+
+    button {
+      background-color: $light-red;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    border-bottom: 1px solid $dark-lime;
+    border-left: 1px solid $dark-lime;
+    border-right: 1px solid $dark-lime;
+    background-color: $light-gray;
+    cursor: pointer;
+
+    &:nth-child(even) {
+      background-color: $light-lime;
+    }
+
+    &:first-child {
+      border-top: 1px solid $dark-lime;
+    }
+
+    &.active {
+      background-color: $dark-lime;
+    }
+  }
+
+  .gray-box {
+    border: 2px solid $dark-gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+
+    & > div {
+      display: inline-block;
+      margin-right: 20px;
+
+      input {
+        width: 180px;
+      }
+
+      &.buttons {
+        display: block;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.development-action-step-modal{
+  h5{
+    color: $hot-color;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .step-fields{
+    width: 480px;
+    display: inline-block;
+  }
+
+  padding: 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 100px;
+    margin-right: 10px;
+    color: $dark-gray;
+  }
+
+  input,
+  textarea,
+  select {
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  select {
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 550px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+
+  .radio-button {
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
+
+    &.first {
+      margin-left: 0;
+    }
+  }
+
+  .buttons {
+    margin-top: 20px;
+    text-align: center;
+    
+    button:first-child {
+      margin-right: 100px;
+    }
+  }
+
+  .status {
+    border: 1px solid $dark-gray;
+    margin-top: 20px;
+    height: 70px;
+    border-radius: 10px;
+    position: relative;
+
+    input {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    input:disabled {
+      background-color: $light-gray;
+      border-color: $dark-gray;
+    }
+
+    .status-title {
+      background-color: white;
+      color: $dark-gray;
+      font-size: 14px;
+      position: absolute;
+      padding: 0 10px;
+      width: 180px;
+      top: -13px;
+      left: calc(50% - 90px);
+    }
+
+    .status-column {
+      display: inline-block;
+      width: 255px;
+    }
+    .label {
+      width: 115px;
+    }
+
+    .due-date {
+      input {
+        width: 100px;
+      }
+      &.past-due input {
+        color: red;
+      }
+    }
+
+    .actual-budget input {
+      width: 80px;
+    }
+
+    .current-status input {
+      width: 90px;
+    }
+
+    .percent-complete input {
+      width: 50px;
+    }
+
+    .status-column.buttons {
+      width: 180px;
+      text-align: right;
+      margin-top: 0;
+
+      button {
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: 5px;
+        display: block;
+        font-weight: normal;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

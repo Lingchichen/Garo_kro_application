@@ -1,0 +1,18 @@
+@import "styles/variables";
+
+.button {
+  cursor: pointer;
+  background-color: $light-lime;
+  color: $hot-color;
+  border: 2px solid $dark-lime;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 3px 33px;
+  &:hover,
+  &.active {
+    background-color: $activeButtonBackground;
+  }
+  &.small-btn {
+    padding: 0 15px;
+  }
+}

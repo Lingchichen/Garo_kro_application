@@ -1,0 +1,103 @@
+@import "styles/variables";
+@import "scenes/Login/variables";
+
+$formMargin: $logoMargin + $logoHeight + 27px;
+
+.the-form {
+  width: 562px;
+  height: 297px;
+  border: 3px solid $dark-lime;
+  border-radius: 20px;
+  margin: auto;
+  position: absolute;
+  top: $formMargin;
+  right: 0;
+  left: 0;
+  background-color: white;
+
+  .prompt {
+    padding-top: 22px;
+  }
+
+  .field-row {
+    //146x35
+    text-align: right;
+    width: 219px;
+    margin-left: auto;
+    margin-right: auto;
+
+    label {
+      margin-right: 9px;
+      font-size: 14px;
+      color: $dark-gray;
+    }
+
+    input {
+      width: 146px;
+      height: 35px;
+      border: 2px solid $dark-lime;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 15px;
+
+      &#username {
+        margin-top: 36px;
+      }
+    }
+  }
+
+  .remember-row {
+    margin-top: 15px;
+    text-align: center;
+    color: $hot-color;
+
+    input {
+      position: absolute;
+      left: -9999px;
+    }
+
+    label {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid $dark-lime;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 7px;
+      position: relative;
+    }
+
+    input:checked + label:before {
+      content: "X";
+      display: block;
+      position: absolute;
+      top: -5px;
+      right: 3px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .submit-row {
+    text-align: center;
+    margin-top: 15px;
+    button {
+      cursor: pointer;
+      background-color: $light-lime;
+      color: $hot-color;
+      border: 2px solid $dark-lime;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 3px 33px;
+      &:hover {
+        background-color: $activeButtonBackground;
+      }
+    }
+  }
+  .forgot-password {
+    color: $hot-color;
+    padding-left: 25px;
+  }
+}

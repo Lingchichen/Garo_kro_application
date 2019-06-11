@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+<form method="post" class="confirm-delete">
+    {% csrf_token %}
+    <p>Are you sure you want to delete the following?</p>
+    <ul>
+        {% for object in objects %}
+            <li>{{object}}</li>
+            <input type="hidden" name="delete_ids" value="{{object.id}}" />
+        {% endfor %}
+    </ul>
+    <button class="large" type="submit">Confirm</button>
+</form>
+{% endblock %}

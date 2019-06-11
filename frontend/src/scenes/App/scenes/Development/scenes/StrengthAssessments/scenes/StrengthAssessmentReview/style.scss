@@ -1,0 +1,269 @@
+@import "styles/variables";
+
+.strength-assessment-review {
+  .exit{
+    color: black;
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+
+  .landing-page {
+
+    .box{
+      background-color: #f2f2f2;
+
+      .body {
+        padding: 5px;
+      }
+    }
+
+    .person-assessed {
+      width: 315px;
+      display: inline-block;
+      margin-left: 50px;
+      min-height: 154px;
+      vertical-align: top;
+    }
+
+    .reviewer {
+      width: 315px;
+      margin-left: 30px;
+      display: inline-block;
+      min-height: 145px;
+    }
+
+    .introduction {
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-top: 50px;
+
+      .header {
+        color: $hot-color;
+      }
+    }
+
+    .buttons {
+      margin-top: 60px;
+      text-align: center;
+
+      button {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    td:first-child {
+      color: $hot-color;
+      width: 140px;
+    }
+  }
+
+  .top-bar {
+    background-color: #e0e3d7;
+    height: 60px;
+    margin: 0 -10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    > div {
+      display: inline-block;
+    }
+
+    .person-assessed {
+      background-color: $light-gray;
+      border: 2px solid $dark-lime;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: 12px;
+
+      .position {
+        font-style: italic;
+      }
+
+      img {
+        width: 25px;
+      }
+    }
+
+    .buttons button {
+      margin: 0 20px;
+    }
+  }
+
+  .question{
+    .detail{
+      width: 50%;
+      padding-left: 25px;
+      padding-top: 10px;
+      display: inline-block;
+    }
+
+    .statement-header{
+      color: $hot-color;
+      border-bottom: 1px solid $dark-lime;
+      padding-left: 20px;
+    }
+
+    .content{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .assessments{
+      margin-top: 30px;
+      display: inline-block;
+
+      tr{
+        border-bottom: 1px solid $dark-lime;
+      }
+
+      td{
+        text-align: center;
+        position: relative;
+      }
+
+      thead td{
+        line-height: 18px;
+        padding: 0 8px;
+      }
+
+      thead td:nth-child(2){
+        color: #1979c5;
+      }
+
+      thead td:nth-child(3){
+        color: #703dc4;
+      }
+      
+      tbody td:first-child div{
+        background-color: #d8d8d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 20px;
+        margin: 5px 0;
+      }
+      
+
+      tbody td div.circle{
+        border: 2px solid $dark-lime;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        margin: 0 auto;
+      }
+      
+      tbody td:nth-child(2) .circle{
+        border-color: #1979c5;
+      }
+
+      tbody td:nth-child(3) .circle{
+        border-color: #703dc4;
+      }
+
+      tbody td div.variance{
+        position: relative;
+        font-weight: bold;
+        z-index: 10;
+        //color: #b7dde8;
+        color: $hot-color;
+        &.negative{
+          color: red;
+        }
+      }
+
+      tbody td div.triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20px 34.6px 20px;
+        border-color: transparent transparent #b7dde8 transparent;
+        position: absolute;
+        top: 10px;
+        left: 17px;
+        z-index: 5;
+      }
+      
+      tbody td div.triangle.negative{
+        border-color: transparent transparent #e5b9b5 transparent;
+      }
+
+      tbody td div.triangle-border{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 22.5px 39.0px 22.5px;
+        border-color: transparent transparent black transparent;
+        position: absolute;
+        top: 7px;
+        left: 15px;
+        z-index: 1;
+      }
+    }
+
+    .graph{
+      display: inline-block;
+      
+      vertical-align: top;
+      margin: 20px 0 0 20px;
+    }
+
+    .question-nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 20px 25px 0 25px;
+
+      button{
+        min-width: 100px;
+      }
+
+      .progress {
+        width: 425px;
+        margin: 0 auto;
+        background-color: rgb(205, 227, 145);
+        .progress-bar {
+          background-color: rgb(109, 179, 63);
+        }
+      }
+    }
+    
+    .question-counter{
+      text-align: center;
+    }
+  }
+
+  .comments-page{
+    .comment-box-header{
+      font-size: 20px;
+      color: $hot-color;
+      margin-top: 20px;
+    }
+
+    .error-msg{
+      color: red;
+      font-size: 12px;
+    }
+
+    textarea{
+      width: 100%;
+      border: 2px solid $dark-lime;
+      border-radius: 10px;
+      padding: 0 5px;
+      height: 100px;
+      &.error{
+        border-color: red;
+      }
+    }
+  }
+
+  .thank-you{
+    text-align: center;
+  }
+}

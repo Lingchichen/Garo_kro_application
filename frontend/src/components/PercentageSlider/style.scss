@@ -1,0 +1,40 @@
+@import "styles/variables";
+
+.percentage-slider {
+  display: inline-block;
+  width: 400px;
+  margin-bottom: 5px;
+
+  .input-range__label--min,
+  .input-range__label--max {
+    display: none;
+  }
+
+  .input-range__track {
+    background: $light-gray;
+    border: 2px solid $dark-lime;
+    border-radius: 0;
+    height: 7px;
+  }
+
+  .input-range__track--active {
+    display: none;
+  }
+
+  .input-range__slider {
+    border-radius: 5px;
+    width: 50px;
+    height: 25px;
+    background-color: $light-gray;
+    border: 2px solid $dark-lime;
+    margin-left: -1.5rem;
+  }
+
+  .input-range__label--value {
+    top: -0.5rem;
+    z-index: 10;
+    color: black;
+    pointer-events: none;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  }
+}

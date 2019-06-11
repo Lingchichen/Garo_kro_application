@@ -1,0 +1,26 @@
+{# context: logo_src, breadcrumbs #}
+{% load static %}
+<div class="component {% block component_class %}{% endblock %}">
+    <div class="component__header">
+        <div class="left">
+            <img class="component__logo" src="{{ logo_src }}" alt="" />
+            <ul class="component__breadcrumbs">
+                {% for breadcrumb in breadcrumbs %}
+                    <li>
+                        {% if forloop.last %}
+                            {{ breadcrumb.text }}
+                        {% else %}
+                            <a href="{{ breadcrumb.url }}">{{ breadcrumb.text }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="right">
+            <div class="component__actions">{% block actions %}{% endblock %}</div>
+        </div>
+    </div>
+    <div class="component__body">
+        {% block component_content %}{% endblock %}
+    </div>
+</div>

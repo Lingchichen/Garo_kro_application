@@ -1,0 +1,120 @@
+@import "styles/variables";
+
+.development-plan-review {
+  .exit{
+    color: black;
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+
+  .landing-page {
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+    h3 {
+      width: 100%;
+    }
+
+    .box {
+      background-color: $light-gray;
+
+      .body {
+        padding: 0 10px;
+      }
+    }
+
+    td:first-child {
+      color: $hot-color;
+      width: 130px;
+    }
+
+    .person-assessed,
+    .reviewer {
+      width: 300px;
+      margin: 0 15px;
+    }
+
+    .introduction {
+      .header {
+        color: $hot-color;
+      }
+      margin-top: 20px;
+      line-height: 18px;
+    }
+
+    .buttons {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+
+  .review-page {
+    .top-bar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #e0e3d7;
+      margin: 0 -10px;
+      height: 60px;
+
+      .person-assessed {
+        background-color: $light-gray;
+        border: 2px solid $dark-lime;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 12px;
+
+        .position {
+          font-style: italic;
+        }
+
+        img {
+          width: 25px;
+        }
+      }
+
+      .buttons button {
+        margin: 0 10px;
+        width: 180px;
+      }
+    }
+
+    .needs-box {
+      margin: 20px;
+      padding: 0 20px;
+
+      .label {
+        font-size: 20px;
+        color: $hot-color;
+      }
+
+      textarea {
+        width: 100%;
+        border: 2px solid $dark-lime;
+        border-radius: 10px;
+        padding: 5px;
+        &.error{
+          border-color: red;
+        }
+      }
+    }
+
+    .development-plan {
+      margin-top: 20px;
+    }
+
+    .error-msg{
+      color: red;
+      font-size: 12px;
+    }
+  }
+
+  .thank-you{
+    text-align: center;
+  }
+}

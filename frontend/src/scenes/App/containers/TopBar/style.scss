@@ -1,0 +1,72 @@
+@import "styles/variables";
+
+.top-bar {
+  height: $topBarHeight;
+
+  .left,
+  .center,
+  .right {
+    height: $topBarHeight;
+  }
+
+  .left {
+    float: left;
+    img {
+      margin-left: 12px;
+    }
+  }
+
+  .left,
+  .right {
+    img {
+      max-height: 43px;
+      margin-top: 8px;
+    }
+  }
+
+  .center {
+    height: $topBarHeight;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    .search-form {
+      width: 160px;
+      text-align: center;
+      height: $topBarHeight;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: blue;
+      color: white;
+    }
+  }
+
+  .right {
+    float: right;
+    img {
+      margin-right: 23px;
+    }
+    .gears {
+      margin-right: 12px;
+    }
+    .social-media {
+      max-height: 22px;
+    }
+  }
+
+  img {
+    max-height: $topBarHeight;
+  }
+}
+
+.in-progress {
+  position: relative;
+  top: 19px;
+  right: 46px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0 8px;
+  font-size: 7px;
+  color: white;
+}

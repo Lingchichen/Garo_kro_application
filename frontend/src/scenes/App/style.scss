@@ -1,0 +1,11 @@
+@import "styles/variables";
+.app-content {
+  width: $appWidth - $sideBarWidth - 2px - 11px;
+  height: $appHeight - $topBarHeight - 2px - 11px;
+  margin-bottom: 11px;
+  margin-right: 11px;
+  padding: 10px;
+  float: right;
+  overflow-y: auto;
+  position: relative;
+}

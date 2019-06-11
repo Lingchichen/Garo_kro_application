@@ -1,0 +1,69 @@
+@import "styles/variables";
+@import "./variables";
+
+.company-select {
+  .kro-logo {
+    position: absolute;
+    right: 30px;
+    top: 13px;
+  }
+
+  .as-one-logo {
+    position: absolute;
+    top: $logoMargin;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: $logoHeight;
+  }
+
+  button {
+    width: 110px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul {
+    overflow-y: auto;
+    max-height: 150px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+    border: 1px solid $dark-lime;
+
+    li:nth-child(even) {
+      background-color: $light-lime;
+    }
+
+    li:nth-child(odd) {
+      background-color: $light-gray;
+    }
+
+    li.selected {
+      background-color: $dark-lime;
+    }
+
+    li:first-child {
+      border-top: none;
+    }
+
+    li {
+      border-top: 1px solid $dark-lime;
+      padding: 5px;
+      cursor: pointer;
+
+      div {
+        display: inline-block;
+        font-weight: bold;
+        &.company-name {
+          color: $hot-color;
+          width: 190px;
+        }
+      }
+    }
+  }
+}

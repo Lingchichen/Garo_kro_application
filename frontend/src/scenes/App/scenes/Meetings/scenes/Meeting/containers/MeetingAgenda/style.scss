@@ -1,0 +1,113 @@
+@import "styles/variables";
+
+.meeting-agenda {
+  border-width: 1px;
+
+  .header {
+    background-color: $light-lime;
+    border: 1px solid $dark-lime;
+    border-top: none;
+    border-radius: 15px;
+    height: 35px;
+    padding-left: 20px;
+    margin-top: 1px;
+    font-weight: bold;
+
+    img {
+      max-width: 30px;
+      margin-right: 5px;
+    }
+  }
+
+  .section {
+    font-weight: bold;
+    padding-left: 30px;
+  }
+
+  .topic {
+    font-weight: normal;
+    padding-left: 20px;
+    font-size: 14px;
+
+    .notes.active {
+      background-color: $light-lime;
+      width: 377px;
+      margin-left: -49px;
+      border: 1px solid $dark-lime;
+      margin-top: 5px;
+
+      .topic-title {
+        padding-left: 48px;
+        margin-bottom: 10px;
+      }
+
+      .buttons {
+        margin-bottom: 10px;
+
+        .notes-button,
+        .post-notes-button {
+          height: 30px;
+          display: inline-block;
+          text-align: center;
+          width: 170px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .notes-button {
+          margin-right: 15px;
+          margin-left: 10px;
+        }
+        .post-notes-button {
+        }
+      }
+      .presenter {
+        color: $dark-gray;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        select {
+          //background-color: $light-lime;
+          width: 160px;
+          border: 1px solid $dark-lime;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+      .notes-field {
+        padding-left: 10px;
+        padding-right: 10px;
+        textarea {
+          width: 100%;
+          border: 2px solid $dark-lime;
+          border-radius: 10px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  .duration {
+    color: $dark-lime;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+}
+
+img.section-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark-lime;
+}
+img.topic-checkbox {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid $dark-lime;
+  background-color: white;
+}

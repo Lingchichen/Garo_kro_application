@@ -1,0 +1,127 @@
+@import "styles/variables";
+
+@import "styles/variables";
+
+.meeting-projects {
+  width: 49%;
+  float: right;
+  min-height: 375px;
+  border-width: 1px;
+  position: relative;
+
+  .header {
+    background-color: $light-lime;
+    border: 1px solid $dark-lime;
+    border-top: none;
+    border-radius: 15px;
+    height: 35px;
+    padding-left: 20px;
+    margin-top: 1px;
+    font-weight: bold;
+
+    img {
+      max-width: 33px;
+    }
+  }
+
+  > ul {
+    margin-bottom: 87px;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    font-size: 14px;
+
+    li {
+      padding: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      position: relative;
+      min-height: 50px;
+
+      &.project {
+        border-bottom: 1px solid $dark-lime;
+      }
+
+      &:before {
+        position: absolute;
+        left: -10px;
+        top: 0px;
+        content: "";
+        display: block;
+        border-left: 2px solid $dark-lime;
+        height: 1.2em;
+        border-bottom: 2px solid $dark-lime;
+        width: 10px;
+      }
+
+      &:after {
+        position: absolute;
+        left: -10px;
+        bottom: -7px;
+        content: "";
+        display: block;
+        border-left: 2px solid $dark-lime;
+        height: 100%;
+      }
+
+      &.project {
+        &:before {
+          display: none;
+        }
+        &:after {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      .due-date {
+        font-size: 12px;
+        font-weight: normal;
+        color: $dark-gray;
+
+        &.past-due {
+          color: red;
+        }
+
+        .stall-alert {
+          width: 15px;
+          margin-left: 5px;
+        }
+      }
+
+      .arrow {
+        width: 25px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        img {
+          width: 100%;
+          transform: rotate(180deg);
+          cursor: pointer;
+        }
+      }
+
+      .milestone .arrow {
+        right: 5px;
+      }
+    }
+  }
+
+  ul.milestones {
+    padding-left: 20px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+  }
+}

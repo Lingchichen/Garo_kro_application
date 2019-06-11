@@ -1,0 +1,70 @@
+@import "styles/variables";
+
+.development-plan {
+  margin: 40px 20px;
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+
+    .dev-plan-filters {
+      color: $hot-color;
+    }
+
+    .filter-label {
+      color: $dark-gray;
+      margin-right: 10px;
+    }
+    
+    .filter-active {
+      margin-right: 10px;
+    }
+
+    .filter-active, .filter-completed{
+        cursor: pointer;
+    }
+  }
+
+  .body {
+    font-size: 14px;
+
+    table{
+        margin-top: 10px;
+    }
+
+    td,
+    th {
+      border: 2px solid $dark-lime;
+      padding: 3px;
+      font-weight: normal;
+      vertical-align: top;
+      
+      &:first-child {
+        width: 200px;
+      }
+
+      &:nth-child(2) {
+        width: 380px;
+      }
+
+      &:nth-child(3) {
+        width: 120px;
+      }
+      
+      &:nth-child(4) {
+        vertical-align: middle;
+      }
+    }
+
+    th{
+        color: $hot-color;
+        background-color: #ebf1df;
+    }
+
+    img {
+      width: 30px;
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+  }
+}

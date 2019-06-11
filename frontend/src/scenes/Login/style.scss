@@ -1,0 +1,19 @@
+@import "styles/variables";
+@import "./variables";
+
+.login-form {
+  .kro-logo {
+    position: absolute;
+    right: 30px;
+    top: 13px;
+  }
+
+  .as-one-logo {
+    position: absolute;
+    top: $logoMargin;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: $logoHeight;
+  }
+}

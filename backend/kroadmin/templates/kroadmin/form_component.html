@@ -1,0 +1,38 @@
+{% extends './component.html' %}
+
+{% load static %}
+
+{% block component_class %}form-component{% endblock %}
+
+{% block actions %}
+    {% if delete_url %}
+        <a class="delete-button" href="{{ delete_url }}">
+            <img src="{% static 'kroadmin/trash-can.png' %}" alt="" />
+        </a>
+    {% endif %}
+{% endblock %}
+
+{% block component_content %}
+    <form class="model-form" action="{{ form_action }}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <div class="buttons">
+            <div class="submit">
+                <button type="submit">
+                    <img src="{% static 'kroadmin/checkmark.png' %}" alt="" />
+                    <p>OK</p>
+                </button>
+            </div>
+            <div class="cancel">
+                <a href="{{ cancel_url }}">
+                    <button type="button">
+                        <img src="{% static 'kroadmin/close.png' %}" alt="" />
+                        <p>CANCEL</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

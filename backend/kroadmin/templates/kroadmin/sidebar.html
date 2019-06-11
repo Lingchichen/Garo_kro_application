@@ -1,0 +1,158 @@
+<aside id="sidebar">
+  {% if user.is_authenticated %}
+    <ul>
+      <li>
+        <a href="{% url 'kroadmin:clients' %}"><button class="btn-top {% if sidebar_clients %}active{% endif %}">Clients</button></a><a href="{% url 'kroadmin:company-list' %}"><button class="btn-top {% if not sidebar_clients %}active{% endif %}">Working as One</button></a>
+      </li>
+      {% if sidebar_clients %}
+        <li class="more-space">
+          <select id="sidebar-company-select">
+            {% for company in companies %}
+              <option
+                value="{{ company.id }}"
+                {% if company.id == selected_company %}selected{% endif %}
+              >
+                {{ company.name }}
+              </option>
+            {% endfor %}
+          </select>
+        </li>
+        <li class="more-space">
+          <a href="{% url 'kroadmin:people-list' cpk=selected_company %}">
+            <button class="{% if sidebar_page == 'people' %}active{% endif %}">People</button>
+          </a>
+        </li>
+        <li>
+          <button class="indent-one" disabled>Strength assessments</button>
+        </li>
+        <li>
+          <button class="indent-one" disabled>Performance reviews</button>
+        </li>
+        <li>
+          <button class="indent-one" disabled>Development plans</button>
+        </li>
+        <li class="more-space">
+          <a href="{% url 'kroadmin:value-list' cpk=selected_company %}">
+            <button>Values</button>
+          </a>
+        </li>
+        <li class="more-space">
+          <a href="{% url 'kroadmin:company-department-list' cpk=selected_company %}">
+            <button>Departments</button>
+          </a>
+        </li>
+        <li class="more-space">
+          <button disabled>Job descriptions</button>
+        </li>
+        <li>
+          <button class="indent-one" disabled>Qualifications</button>
+        </li>
+        <li class="more-space">
+          <button disabled>Financial statements</button>
+        </li>
+        <li>
+          <button class="indent-one" disabled>Sections</button>
+        </li>
+        <li>
+          <button class="indent-two" disabled>Categories</button>
+        </li>
+        <li>
+          <button class="indent-three" disabled>Line items</button>
+        </li>
+        <li class="more-space">
+          <button>Meeting types</button>
+        </li>
+        <li>
+          <button class="indent-one">Sections</button>
+        </li>
+        <li>
+          <button class="indent-two">Topics</button>
+        </li>
+        <li>
+          <button>Meeting schedule</button>
+        </li>
+        <li>
+          <button class="indent-one">Progress notes</button>
+        </li>
+        <li class="more-space">
+          <button disabled>Scorecards</button>
+        </li>
+        <li class="more-space">
+          <button disabled>Resource categories</button>
+        </li>
+        <li>
+          <button class="indent-one" disabled>Resources</button>
+        </li>
+      {% else %}
+      <li class="more-space">Settings for all clients</li>
+      <li class="more-space">
+        <a href="{% url 'kroadmin:company-list' %}">
+          <button class="{% if sidebar_page == 'companies' %}active{% endif %}">Companies</button>
+        </a>
+      </li>
+      <li class="more-space">
+        <a href="{% url 'kroadmin:attendeeType-list' %}">
+          <button class="{% if sidebar_page == 'attendeeType' %}active{% endif %}">Attendee types</button>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'kroadmin:companyCategory-list' %}">
+          <button class="{% if sidebar_page == 'companyCategory' %}active{% endif %}">Company categories</button>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'kroadmin:department-list' %}">
+          <button class="{% if sidebar_page == 'department' %}active{% endif %}">WaO Departments</button>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'kroadmin:growthClass-list' %}">
+          <button class="{% if sidebar_page == 'growthClass' %}active{% endif %}">Growth classes</button>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'kroadmin:jobCategory-list' %}">
+          <button class="{% if sidebar_page == 'jobCategory' %}active{% endif %}">Job categories</button>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'kroadmin:status-list' %}">
+          <button class="{% if sidebar_page == 'status' %}active{% endif %}">Statuses</button>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'kroadmin:country-list' %}">
+          <button class="{% if sidebar_page == 'countries' %}active{% endif %}">Countries</button>
+        </a>
+      </li>
+      <li>
+        <button class="indent-one {% if sidebar_page == 'states' %}active{% endif %}">Provinces/states</button>
+      </li>
+      <li class="more-space">
+        <button disabled>Scorrecard types</button>
+      </li>
+      <li>
+        <button class='indent-one' disabled>Line items</button>
+      </li>
+      <li>
+        <button disabled>Scorrecard sections</button>
+      </li>
+      <li class="more-space">
+        <button disabled>Notification Templates</button>
+      </li>
+      <li class="more-space">
+        <button disabled>System settings</button>
+      </li>
+      <li class="more-space">
+        <button disabled>Assessment types</button>
+      </li>
+      <li class="more-space">
+        <button disabled>WaO Resources categories</button>
+      </li>
+      <li>
+        <button class='indent-one' disabled>WaO Resources</button>
+      </li>
+      {% endif %}
+    </ul>
+  {%endif%}
+</aside>

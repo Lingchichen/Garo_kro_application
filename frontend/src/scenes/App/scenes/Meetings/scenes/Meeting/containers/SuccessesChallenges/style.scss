@@ -1,0 +1,63 @@
+@import "styles/variables";
+
+.successes-challenges {
+  width: 49%;
+  float: right;
+  min-height: 375px;
+  border: none;
+
+  .successes,
+  .challenges {
+    border-width: 1px;
+    position: relative;
+
+    button {
+      position: absolute;
+      bottom: 10px;
+      left: 100px;
+    }
+  }
+
+  .challenges {
+    margin-top: 10px;
+  }
+
+  .header {
+    background-color: $light-lime;
+    border: 1px solid $dark-lime;
+    border-top: none;
+    border-radius: 15px;
+    height: 35px;
+    padding-left: 20px;
+    margin-top: 1px;
+    font-weight: bold;
+
+    img {
+      max-width: 33px;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 60px;
+
+    li {
+      padding: 10px;
+      padding-right: 35px;
+
+      img {
+        max-width: 25px;
+        transform: rotate(180deg);
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    li:nth-child(even) {
+      background-color: $light-lime;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.idea/
+.vscode/
+Include/
+KRO-icons/
+Lib/
+Scripts/
+tcl/
+db.sqlite3
+pip-selfcheck.json
+__pycache__/
+frontend/**/style.css
+.svn/
+media/uploads/company-logos/*
+yarn.lock
+jack/

@@ -1,0 +1,18 @@
+{% load static %}
+<header id="topbar">
+  <div class="left">
+    <img src="{% static 'kroadmin/gearsB.png' %}" />
+    <img src="{% static 'kroadmin/working-as-one.png' %}" />
+    {%if user.is_authenticated %}
+      <div class="current-user">
+        <div class="username">
+          <img src="{% static 'kroadmin/person.png' %}" />
+          &nbsp;{{ user.first_name|first|upper }}. {{user.last_name}}
+        </div>
+        <div class="logout"><a href="{% url 'logout' %}"><button>Logout</button></a></div>
+      </div>
+    {%endif%}
+  </div>
+  <div class="workingAdmin">Working As One Admin</div>
+  <img src="{% static 'kroadmin/powered-by-kro.png' %}" />
+</header>

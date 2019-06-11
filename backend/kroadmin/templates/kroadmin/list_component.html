@@ -1,0 +1,23 @@
+{% extends './component.html' %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+{% block component_class %}list-component{% endblock %}
+
+{# context: create_url, delete_url, table #}
+
+{% block actions %}
+    <a class="create-button" href="{{ create_url }}">
+        <img src="{% static 'kroadmin/new.png' %}" alt="" />
+    </a>
+    <a class="delete-button" href="#/">
+        <img src="{% static 'kroadmin/trash-can.png' %}" alt="" />
+    </a>
+{% endblock %}
+
+{% block component_content %}
+    <form method="GET" action="{{form_action}}">
+        {% render_table table %}
+    </form>
+{% endblock %}

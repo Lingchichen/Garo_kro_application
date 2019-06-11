@@ -1,0 +1,14 @@
+.idea
+.vscode
+Include
+Lib
+Scripts
+db.sqlite3
+pip-selfcheck.json
+tcl
+node_modules
+yarn.lock
+*.css
+KRO-icons
+2018
+build

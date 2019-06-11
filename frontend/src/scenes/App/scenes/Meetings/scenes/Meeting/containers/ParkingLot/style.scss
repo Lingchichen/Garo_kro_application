@@ -1,0 +1,57 @@
+@import "styles/variables";
+
+.parking-lot {
+  width: 49%;
+  float: right;
+  min-height: 375px;
+  border-width: 1px;
+  position: relative;
+
+  .header {
+    background-color: $light-lime;
+    border: 1px solid $dark-lime;
+    border-top: none;
+    border-radius: 15px;
+    height: 35px;
+    padding-left: 20px;
+    margin-top: 1px;
+    font-weight: bold;
+
+    .issue-count {
+      font-weight: normal;
+    }
+
+    img {
+      max-width: 33px;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    border: 1px solid $dark-lime;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 14px;
+    margin-bottom: 80px;
+
+    li {
+      padding: 5px;
+
+      .time-alloted {
+        font-size: 16px;
+        color: $dark-lime;
+      }
+    }
+
+    li:nth-child(even) {
+      background-color: $light-lime;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+  }
+}

@@ -1,0 +1,161 @@
+@import "styles/variables";
+
+img.stall-alert {
+  width: 20px;
+  margin-left: 5px;
+}
+
+.milestone-form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 700px;
+
+  input,
+  textarea,
+  select {
+    border: 2px solid $dark-lime;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  select {
+    width: 165px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 380px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 380px;
+    margin-bottom: 10px;
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 100px;
+    margin-right: 10px;
+    color: $dark-gray;
+  }
+
+  .priority,
+  .title,
+  .estimated-budget,
+  .department,
+  .budget-approved {
+    display: inline-block;
+  }
+
+  .priority {
+    width: 210;
+    select {
+      width: 125px;
+    }
+    .label {
+      width: 70px;
+    }
+  }
+
+  .estimated-budget input {
+    width: 100px;
+  }
+
+  .department select {
+    width: 150px;
+  }
+
+  .budget-approved {
+    margin-left: 20px;
+  }
+
+  .buttons {
+    text-align: center;
+    button:first-child {
+      margin-right: 80px;
+    }
+  }
+
+  .status {
+    border: 1px solid $dark-gray;
+    margin-top: 20px;
+    height: 70px;
+    border-radius: 10px;
+    position: relative;
+
+    input {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    input:disabled {
+      background-color: $light-gray;
+      border-color: $dark-gray;
+    }
+
+    .status-title {
+      background-color: white;
+      color: $dark-gray;
+      font-size: 14px;
+      position: absolute;
+      padding: 0 10px;
+      width: 100px;
+      top: -13px;
+      left: calc(50% - 50px);
+    }
+
+    .status-column {
+      display: inline-block;
+      width: 245px;
+    }
+
+    .due-date {
+      .label {
+        width: 80px;
+      }
+
+      input {
+        width: 130px;
+      }
+
+      &.past-due input {
+        color: red;
+      }
+    }
+
+    .actual-budget input {
+      width: 80px;
+    }
+
+    .current-status input {
+      width: 90px;
+    }
+
+    .percent-complete input {
+      width: 50px;
+    }
+
+    .status-column.buttons {
+      width: 180px;
+      text-align: right;
+
+      button {
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: 5px;
+        display: block;
+        font-weight: normal;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
